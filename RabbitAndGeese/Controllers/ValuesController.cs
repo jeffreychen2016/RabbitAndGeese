@@ -10,6 +10,8 @@ namespace RabbitAndGeese.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -26,8 +28,9 @@ namespace RabbitAndGeese.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] string value)
         {
+            return Ok();
         }
 
         // PUT api/values/5
